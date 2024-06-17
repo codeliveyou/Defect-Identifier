@@ -88,8 +88,8 @@ cv2.imwrite(os.path.join(image_dir, 'rescaled_new_image.jpg'), rescaled_new_imag
 # exit(0)
 
 mark_x, mark_y = 16810, 560
-# real_mark_x, real_mark_y = 23835, 2222
-real_mark_x, real_mark_y = 23840, 13006
+real_mark_x, real_mark_y = 23835, 2222
+# real_mark_x, real_mark_y = 23840, 13006
 left_paddle = 655
 
 new_scale = (real_mark_x - left_paddle) / mark_x
@@ -110,8 +110,6 @@ for i in range(-1, 2):
     r_left_top_y     = max(left_top_y,     0)
     r_right_bottom_y = min(right_bottom_y, new_image_height)
 
-    # print(left_top_x, left_top_y, right_bottom_x, right_bottom_y)
-    # exit(0)
     design_image[r_left_top_y : r_right_bottom_y, left_top_x : right_bottom_x] = scaled_large_image[r_left_top_y - left_top_y : r_right_bottom_y - left_top_y, :]
 
 cv2.imwrite(os.path.join(image_dir, 'design_image.jpg'), design_image)
