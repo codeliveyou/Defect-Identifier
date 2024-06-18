@@ -22,7 +22,6 @@ def get_original(x, y, w, h):
         "length" : [w * large_image_width // scaled_large_image_width, h * large_image_height // scaled_large_image_height]
         }
 
-
 def comparator(img_dir, design_img_name, product_img_name):
     design_img_path = os.path.join(img_dir, design_img_name)
     product_img_path = os.path.join(img_dir, product_img_name)
